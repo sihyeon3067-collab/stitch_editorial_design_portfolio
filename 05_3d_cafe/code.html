@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>05 - Underwater 3D Cafe | CREATIVE SIHYEON</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#b40064",
+                        "background": "#fbf9f8",
+                        "secondary-fixed": "#e3e3de",
+                        "on-secondary-container": "#646561",
+                        "surface-container-high": "#e9e8e7",
+                        "secondary-container": "#e3e3de",
+                        "on-secondary-fixed": "#1b1c19",
+                        "surface-container-highest": "#e4e2e2",
+                        "on-surface-variant": "#594048",
+                        "secondary": "#5e5f5b",
+                        "primary-fixed-dim": "#ffb0ca",
+                        "on-primary-fixed-variant": "#8d004d",
+                        "on-primary-container": "#fffbff",
+                        "primary-container": "#da227d",
+                        "on-error-container": "#93000a",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "surface-tint": "#b90066",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "surface-container": "#efeded",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1b1c1c",
+                        "on-primary-fixed": "#3e001f",
+                        "inverse-surface": "#303031",
+                        "on-secondary-fixed-variant": "#464744",
+                        "surface-variant": "#e4e2e2",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-background": "#1b1c1c",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#f7feff",
+                        "secondary-fixed-dim": "#c7c7c2",
+                        "surface": "#fbf9f8",
+                        "inverse-primary": "#ffb0ca",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#e0bec7",
+                        "outline": "#8d6f78",
+                        "surface-bright": "#fbf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#5d5c5b",
+                        "tertiary-fixed": "#e5e2e1",
+                        "tertiary-container": "#767474",
+                        "surface-dim": "#dbdad9",
+                        "primary-fixed": "#ffd9e3",
+                        "surface-container-low": "#f5f3f3",
+                        "tertiary-fixed-dim": "#c9c6c5",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "24px",
+                        "margin-desktop": "64px",
+                        "section-gap": "160px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "stack-lg": "48px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "meta-sm": ["Inter"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "display-xl": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["80px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "meta-sm": ["12px", {"lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-xl": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "headline-md": ["32px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["15px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "display-lg-mobile": ["56px", {"lineHeight": "54px", "letterSpacing": "-0.04em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-surface');
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: theme('spacing.gutter');
+        }
+        
+        @media (min-width: 768px) {
+            .grid-layout {
+                grid-template-columns: repeat(12, 1fr);
+            }
+        }
+
+        /* Prevent layout shift from scrollbar */
+        html {
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="w-full px-margin-mobile md:px-margin-desktop py-stack-md max-w-full docked full-width top-0 sticky no-borders bg-background dark:bg-background z-50 flex justify-between items-center flat no shadows transition-all duration-300" id="main-header">
+<a class="text-headline-md font-headline-md font-extrabold text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-0 tracking-tighter" href="#">CREATIVE SIHYEON</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps hover:text-primary transition-colors duration-0" href="#">WORK</a>
+<a class="text-primary font-bold line-through font-label-caps text-label-caps scale-100 transition-none" href="#">PROJECT</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps hover:text-primary transition-colors duration-0" href="#">CONTACT</a>
+</nav>
+<button class="md:hidden text-on-surface hover:text-primary">
+<span class="material-symbols-outlined" style="font-size: 24px;">menu</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pb-section-gap">
+<!-- Hero Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop pt-stack-lg pb-stack-md">
+<div class="grid-layout">
+<div class="col-span-4 md:col-span-12 flex justify-between items-start mb-stack-sm border-b border-on-surface pb-stack-sm">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg uppercase text-on-surface">UNDERWATER 3D CAFE</h1>
+<div class="text-right hidden md:block">
+<div class="font-meta-sm text-meta-sm text-on-surface uppercase mb-1">PROJECT TYPE</div>
+<div class="font-body-md text-body-md text-on-surface-variant">3D Modeling</div>
+<div class="font-meta-sm text-meta-sm text-on-surface uppercase mt-4 mb-1">YEAR</div>
+<div class="font-body-md text-body-md text-on-surface-variant">2024</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Large Main Image -->
+<section class="w-full px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="grid-layout">
+<div class="col-span-4 md:col-span-12">
+<div class="w-full aspect-[16/9] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A wide, highly detailed 3D isometric render of an underwater cafe. The space is filled with soft, aquatic blue lighting filtering from above. It features minimalist furniture, potted plants, and large glass windows revealing a deep blue ocean environment with subtle marine life. High-end, soft-lit, modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLQ7_lWQpHZdsbZIIOTHxJJd1btHEy2BuP51ceH_G0pyNFYfXtIssRdmh2_KeuTeGTwSQYvZ9xtRvUcazLSO_uKYEW21OKzbHiWRuGjN7Fn8pwUOOK-YjqlMVAQ84L2FvMe2oqK9X7LAXgbec2nHMaq8U5-0-B4DAP9-jcymVtEIL_5knK1ud8m2jvgiXRfsdHm3CLqGQ91ZufnzQ7PDsk8P-7BikmGtdlxMstTz3c5UBYVEGvrNN_"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Intro / Text / Blueprint Grid -->
+<section class="w-full px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="grid-layout">
+<!-- Text Block -->
+<div class="col-span-4 md:col-span-4 flex flex-col justify-start">
+<h2 class="font-label-caps text-label-caps uppercase text-on-surface mb-stack-sm">ABOUT</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
+                    </p>
+</div>
+<!-- Blueprint Image -->
+<div class="col-span-4 md:col-span-8 mt-stack-md md:mt-0">
+<div class="w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-contain p-8" data-alt="A detailed, monochrome blueprint or untextured ambient occlusion 3D render of a cafe interior. It shows the structural layout, furniture placement, and architectural elements with clean lines and soft shading, contrasting with the final textured renders. Modernist architectural visualization style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9DrxhCMFjNumYb5xcarMhheLFHkL8gya8oEMIHGNnVk0CDOI3c35zwxg4cuaeS0j9dCoFCIRKKyuGJSsyuIbM7N3iVN2W6IigD1N3EGrntP8kwoiir39e8nJy3CBehygOvbFnAYQAWC5kaoZI7UCZW0aAWP0bqmy03RwreMiwA6rrTL0rb4J9Wgg7Fyvw6C9rpvXWEu94AOt1wjPKinvNl7P2rt0wVaWs33MdOTwIor91As7zDk-v"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Props / Assets Grid -->
+<section class="w-full px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="grid-layout items-center">
+<!-- Prop Images -->
+<div class="col-span-4 md:col-span-8 grid grid-cols-3 gap-gutter">
+<div class="bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-4">
+<img class="object-contain w-full h-full" data-alt="A small, soft-lit 3D render of a minimalist cafe chair, isolated on a light gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTXw7KHxMA0j--IFHoRefh5BMmyKX4N1pkVJ2jqwNe27_ClLdKv7-4O-GmtKTV3nwOIsMKtK2RRiKsgYkDPN5E4L9SXmT_4VLhOYgwGF1MC0fK76wG4Xb0aI_2ACL4YanVeEVzLIY2FZiZWd_ziPxTKI9aM4di2NJC1_LT4OCx4aTw_tgv5tDaWZdrhkK32dttdcJFdzLomHgM3Wig2vbt9T2PqHnWRRPrC9BePEx3PgsjxgQjT3y8"/>
+</div>
+<div class="bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-4">
+<img class="object-contain w-full h-full" data-alt="A small, soft-lit 3D render of a modern coffee table with a plant on it, isolated on a light gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtuKqpMKcwJPXZLaJBza-qJDE7jkvRpQxIoZzAnila3OsF6vUUZy4-ukRe0ZuNfrywfnLQrYFlDQyBvoqbmMZBZ0WOps9rp6skrSlvkz6UDycjmPfjNjBK4CTsRsRHJF_uwaW1033QbDU05Pi7hA_lhpn1OO3NQpgxS_f2eD9Seqo0jyXySzRYc6si0hok3tiJMXWwFl6MgSAkqtkczf8GKbYJ8dEHVTGbVH8zQd4FCa6TStM4S0Ef"/>
+</div>
+<div class="bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-4">
+<img class="object-contain w-full h-full" data-alt="A small, soft-lit 3D render of an espresso machine and coffee cups, isolated on a light gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5YmtSoC4SfJb8V9KRRF16itvR628TQ8Cplm2r75KGtUpWfZTWXKdCLZTb1XQYG9DGmmMAtGotJtM0qXQGPIm5IKRTJlZ7TzLB4aRTBuPemkK6V8MemGytscdcilEnR-7wHHrVBtmdDB_VFH8vY3BLIgBUuM6EGUldPDw0rHkmw6XDV6IGkBVU3NtA0Z1dtGiZNSd59Nkd9TivxrKpRfNdaBs7BYQ868BLhXaUC4zrdRlKs_VPucwU"/>
+</div>
+<div class="bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-4">
+<img class="object-contain w-full h-full" data-alt="A small, soft-lit 3D render of a decorative indoor potted plant, isolated on a light gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkynpkG_ZK5FSowLUMR91moI79VUYgAFW1GkunyYoeLdIakovmT0h1Kmu0CISc4CD_mMcQZZDTlHyaZAEAayj7m70UzMSiwE8h4GfmcbbYI1QLSHZ-nlexEDOUzDUbDBwVlp9_CiAjRkqXqtxft5YfXmYyo7YS6sTInrsQZR49sM3vN3QAGj7qokDyXYiDXgt4AeKj0BHx_4roJHBch3VewA5svIRFv3mLvotulpnjcmyAeRm49HB6"/>
+</div>
+<div class="bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-4">
+<img class="object-contain w-full h-full" data-alt="A small, soft-lit 3D render of a sleek cafe counter section, isolated on a light gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLdKZ0DtmwTJO3sSzvsLdIpo6mLKXLT31k8fF9AHCZzV_YxU6e49bi0Woy56o5wLE_QulouOmCDp6c2LXEfk8K0d0cJSXv7c5hg045BNgEWlrQ7StSV1cs3_zGuXiaHZZVaX0f1VATg2nIrC2mXamg12_eYJXDOD6spzLkQFqPFOM31y5YirKPVkx18cXIuEz9BRDdioaYs65i8ebap_KFWVW1RG4wra-Q3cnVgqWV1QHGNiVDl7XY"/>
+</div>
+<div class="bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-4">
+<img class="object-contain w-full h-full" data-alt="A small, soft-lit 3D render of overhead lighting fixtures, isolated on a light gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1r6crHWqstBp-U9QJRgYXMc724UmRvpau3Z6Qz_P-zuCbwBDMvspIj_J_NTQry0TMX0m6HApyMW8aEXUZq_qQ3r-a5WTg-g9HpplvtSSl7avn59JORnWhIRpYiWTUHfLYZ-qlQHhv78sy0sNvCd5cFf5S7041cpm__94DJ7LJZfZCUm46Yl5lJigAFiwTfLo8CINdMMfCOo9uvKiqd6Oco1qV2ceEBLeoU07OBMu9HUQde4C8VZpp"/>
+</div>
+</div>
+<!-- Text Block -->
+<div class="col-span-4 md:col-span-4 flex flex-col justify-center mt-stack-md md:mt-0 md:pl-gutter">
+<h2 class="font-label-caps text-label-caps uppercase text-on-surface mb-stack-sm">ABOUT</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel
+                    </p>
+</div>
+</div>
+</section>
+<!-- Final Atmospheric Renders -->
+<section class="w-full px-margin-mobile md:px-margin-desktop mb-stack-lg">
+<div class="grid-layout gap-y-gutter">
+<div class="col-span-4 md:col-span-12">
+<div class="w-full aspect-video bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A beautiful, soft-lit 3D interior render of an underwater cafe. Sunlight filters through water creating caustics on the floor. The color palette is composed of serene aquatic blues and soft warm whites. Modern, calm aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFEf0CM_p_Z3wHN_hlHdIdLFVCuWWMhaavSWhVAsXT5e-yZuYem56iKn0MOFUxHQfzDC8bqELmiC81yDjxKUimiAUyvABS9gCoymm-07Zk8e8UhLR8aZq25g8i2L-zb3coYZHAmlxquDKZdgsDZivAPIrJJKOAey9JcD9RzSTYORFk12IV-t4arN2VTkaNtinAi-ynzfvc7INa4YA4XYyz3UdVTm1AcST6fOQe7aHFe1rov4vWqbH9"/>
+</div>
+</div>
+<div class="col-span-4 md:col-span-12">
+<div class="w-full aspect-video bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Another view of the 3D underwater cafe interior, focusing on a seating area near a large glass window looking out into the ocean. Soft, ethereal lighting, high-end architectural visualization style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeackOvhu-ZX207qbPdu010lUBbdxIB_HTojl9bUfx1BXCHI2oWw50z5kEaznM2I5kB1L7AwvRoufgy9KdWy2HjqY6qHd9wbxEhXjsGQvAXR4QNkJ-f2IsflgnFrPYeZIPyef-Q7KlURqQacoq6EFAJZzu8zx77Dz8CVFERrwX_VldKna_IgebdFP9DWOogXI8wwTbcs1W-ts0tA7ghuPLUW2Kh0yYOiUAatf1IuEhjSFGv1FhxBuB"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Destination / Navigation Footer) -->
+<nav class="md:hidden w-full px-margin-mobile py-stack-sm bg-primary dark:bg-primary flex justify-between items-center docked full-width bottom-0 z-40">
+<a class="flex flex-col items-center gap-1 text-on-primary px-4 py-2 hover:bg-on-primary hover:text-primary transition-none" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+<span class="font-label-caps text-label-caps text-[10px]">PREV</span>
+</a>
+<a class="flex flex-col items-center gap-1 bg-on-primary text-primary px-4 py-2 scale-100" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">grid_view</span>
+<span class="font-label-caps text-label-caps text-[10px]">INDEX</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-on-primary px-4 py-2 hover:bg-on-primary hover:text-primary transition-none" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+<span class="font-label-caps text-label-caps text-[10px]">NEXT</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-stack-md bg-background dark:bg-background no-borders flat no shadows mt-auto border-t border-surface-variant">
+<div class="font-label-caps text-label-caps text-on-surface opacity-80 uppercase">
+            © 2024 CREATIVE SIHYEON — PORTFOLIO
+        </div>
+<div class="flex gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary hover:underline transition-none uppercase" href="#">EMAIL</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary hover:underline transition-none uppercase" href="#">BEHANCE</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary hover:underline transition-none uppercase" href="#">NOTION</a>
+</div>
+</footer>
+<script>
+        // Simple header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm', 'bg-opacity-95', 'backdrop-blur-sm');
+            } else {
+                header.classList.remove('shadow-sm', 'bg-opacity-95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body></html>

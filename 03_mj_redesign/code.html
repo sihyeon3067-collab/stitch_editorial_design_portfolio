@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>03 - Michael Jackson Album Redesign</title>
+<!-- Google Fonts: Hanken Grotesk & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration (Provided) -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#b40064",
+                    "background": "#fbf9f8",
+                    "secondary-fixed": "#e3e3de",
+                    "on-secondary-container": "#646561",
+                    "surface-container-high": "#e9e8e7",
+                    "secondary-container": "#e3e3de",
+                    "on-secondary-fixed": "#1b1c19",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-surface-variant": "#594048",
+                    "secondary": "#5e5f5b",
+                    "primary-fixed-dim": "#ffb0ca",
+                    "on-primary-fixed-variant": "#8d004d",
+                    "on-primary-container": "#fffbff",
+                    "primary-container": "#da227d",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f2f0f0",
+                    "surface-tint": "#b90066",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "surface-container": "#efeded",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1b1c1c",
+                    "on-primary-fixed": "#3e001f",
+                    "inverse-surface": "#303031",
+                    "on-secondary-fixed-variant": "#464744",
+                    "surface-variant": "#e4e2e2",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-background": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#f7feff",
+                    "secondary-fixed-dim": "#c7c7c2",
+                    "surface": "#fbf9f8",
+                    "inverse-primary": "#ffb0ca",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#e0bec7",
+                    "outline": "#8d6f78",
+                    "surface-bright": "#fbf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#5d5c5b",
+                    "tertiary-fixed": "#e5e2e1",
+                    "tertiary-container": "#767474",
+                    "surface-dim": "#dbdad9",
+                    "primary-fixed": "#ffd9e3",
+                    "surface-container-low": "#f5f3f3",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "margin-desktop": "64px",
+                    "section-gap": "160px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "stack-lg": "48px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "meta-sm": ["Inter"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "display-xl": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["80px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                    "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                    "meta-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" }],
+                    "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                    "display-xl": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                    "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                    "display-lg-mobile": ["56px", { "lineHeight": "54px", "letterSpacing": "-0.04em", "fontWeight": "800" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center w-full px-margin-desktop py-stack-md max-w-full bg-background top-0 sticky z-50">
+<div class="text-headline-md font-headline-md font-extrabold text-on-surface">
+            CREATIVE SIHYEON
+        </div>
+<nav class="hidden md:flex gap-gutter">
+<a class="text-on-surface font-label-caps text-label-caps hover:text-primary transition-colors duration-0" href="#">WORK</a>
+<a class="text-primary font-bold line-through font-label-caps text-label-caps scale-100 transition-none" href="#">PROJECT</a>
+<a class="text-on-surface font-label-caps text-label-caps hover:text-primary transition-colors duration-0" href="#">CONTACT</a>
+</nav>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="w-full pb-section-gap">
+<!-- Hero Section -->
+<section class="grid grid-cols-4 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop pt-stack-lg pb-stack-lg items-end">
+<div class="col-span-4 md:col-span-8 flex flex-col justify-end">
+<span class="font-display-xl text-display-xl text-primary opacity-20 block -mb-8 pointer-events-none select-none">03</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface uppercase break-words">
+                    MICHAEL JACKSON<br/>ALBUM REDESIGN
+                </h1>
+</div>
+<div class="col-span-4 md:col-span-4 flex flex-col justify-end md:items-end gap-2 pb-2">
+<div class="text-right">
+<p class="font-label-caps text-label-caps text-on-surface-variant">PROJECT TYPE</p>
+<p class="font-meta-sm text-meta-sm text-on-surface">Editorial &amp; Vinyl Design</p>
+</div>
+<div class="text-right mt-4">
+<p class="font-label-caps text-label-caps text-on-surface-variant">YEAR</p>
+<p class="font-meta-sm text-meta-sm text-on-surface">2024</p>
+</div>
+</div>
+</section>
+<!-- Hero Image Full Bleed (within grid constraints) -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap">
+<div class="w-full h-[60vh] bg-surface-container-high relative overflow-hidden flex items-center justify-center">
+<img alt="" class="absolute inset-0 w-full h-full object-cover grayscale mix-blend-multiply opacity-90" data-alt="A striking, high-contrast black and white editorial photograph of a minimalist vinyl record sleeve sitting elegantly on a raw concrete surface. The stark studio lighting creates deep, sharp shadows and bright, blown-out highlights, emphasizing the tactile texture of the matte paper sleeve and the glossy grooved surface of the record peering out. The aesthetic is highly sophisticated, avant-garde, and modern, fitting perfectly within a premium, minimalist design portfolio. The overall tone is moody, serious, and musically inspired." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC-VT25WIaRgu8STwYFHn5MzGFD5Ken32NFpmFXiYerWcPq_srhByCe3P7OrKMuWJLzSDqd1PFqhM0XM37MQdSbI1wScbOhKToC9N2XtUHriu4Nt-G4z4Qq2w-UHppM-OFBhtHuQzvW_VWpw8VUwT4omMLor_HpmvZyjK46Zi17n-ueyT7RQvGtN5jwsJSqhafRmY9DR5-66Uy5mbw1jCwA6a-eaUJ43tEio4WcPqYNHO7pCQBIHz2"/>
+<h2 class="relative z-10 font-display-xl text-display-xl text-on-primary mix-blend-difference text-center leading-none uppercase max-w-4xl px-4">Heal the World</h2>
+</div>
+</section>
+<!-- About & Concept Asymmetric Grid -->
+<section class="grid grid-cols-4 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop pb-section-gap">
+<!-- Left offset text -->
+<div class="col-span-4 md:col-start-2 md:col-span-4 flex flex-col gap-4">
+<h3 class="font-label-caps text-label-caps text-on-surface border-b border-on-surface pb-2 inline-block max-w-max">ABOUT</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                </p>
+</div>
+<!-- Right aligned image -->
+<div class="col-span-4 md:col-start-8 md:col-span-5 h-[400px] mt-stack-md md:mt-0">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="A macro, extreme close-up shot of a textured paper surface interacting with stark, harsh directional light. The image is strictly black and white, highlighting the microscopic peaks and valleys of the premium uncoated paper stock. Abstract geometric shadows intersect the frame, creating a modern, constructivist composition. The mood is highly clinical and analytical, reflecting a deep appreciation for material constraints in high-end print and packaging design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7TdMskBEdTT_EUYufK9aNJCkB7-mAnie6i6nEFvrTE2WW4nlX6ZwdfoBnWwiiIKqOMoZqprfkcYRBtKWd_Nj3adLpbXd6TPWDAh-rx1T9xmlnpTSVusOF_aYDnwEtoL_d3iTRFhOMeo0DSxfDFW5eBHepZVSCZ1XRXH9cbFSpVv-vZgPDR1yWLQZMz718TvqeiKhu0VR7cCZEGaMi528O3cpnKbpjkbKR8LdovrlfOBXyeLR-bkXx"/>
+</div>
+</section>
+<!-- Gallery / Process Spread -->
+<section class="grid grid-cols-4 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop pb-section-gap items-center">
+<div class="col-span-4 md:col-span-6 h-[500px]">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="An open magazine spread design laid flat on a pristine white surface, shot from directly above top-down in high-contrast monochrome. The layout visible on the pages features aggressive, asymmetrical typography scaling and rigid grid alignment reminiscent of Swiss design and avant-garde fashion publications. Negative space is used heavily. A single, bold, abstract graphic bleeds across the center gutter. The lighting is incredibly flat and even, ensuring the focus remains entirely on the structural composition of the graphic design work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcZoaS1ZqzzURIHh7NA_XMZztRINFsvqTTmbHgl0YZTiRbOvdCSIPvnHbEipBa7Eb_eJM4z4VG0s8759Hex7b_H4fBki1-CLgBZ-Ips0V98xtc_N43biCEJ-n5oQO4jIytYepwFa7qcAsVAE5xOqSEo1dgLNbRKFgQJqmUVqpZ7UaOwUosBO2naAHBdJxHBZ0dHHi2zr64KHFNs0YKQhpRVNfy7mHBTbNqcbvdfkDH9cwmUjoevcuG"/>
+</div>
+<div class="col-span-4 md:col-start-8 md:col-span-4 flex flex-col gap-4 mt-stack-md md:mt-0">
+<h3 class="font-label-caps text-label-caps text-on-surface border-b border-on-surface pb-2 inline-block max-w-max">CONCEPT</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.
+                </p>
+<div class="w-full h-[250px] mt-stack-sm bg-surface-container">
+<img alt="" class="w-full h-full object-cover grayscale" data-alt="A detailed, abstract collage of distressed textures, halftone dot patterns, and fragmented typography isolated against a stark white background. The visual is entirely black and white, emitting a raw, punk-inspired yet highly controlled structural aesthetic. Elements overlap in chaotic but meticulously balanced layers, demonstrating an experimental approach to editorial graphic design and print techniques." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1JzapjK6aYYFfGHR8WYKSqF0aWqDemgL5ErUYnM21pdbwTcw-VyAarknaLurm_RMXVF6ystZ7bwDZWo1ogBhgTfSuGC-FzNKxtPN6Gc1MN9F7JAD3qooS16JH2Tu7cbG0wARgy2ysheoFSl6uSCcfiksjHkkGJRHXmI9VmQEwa9_kv7LWEQBby0yYtW1TJ6QhDS2qKf7Gpzr5LAF8usfsFBv_DzCAZKcskal78jhmnpXugriRCEOp"/>
+</div>
+</div>
+</section>
+<!-- Large Type Anchor & Component Layout -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap">
+<div class="w-full border-t border-on-surface pt-stack-lg grid grid-cols-4 md:grid-cols-12 gap-gutter">
+<div class="col-span-4 md:col-span-4">
+<p class="font-label-caps text-label-caps text-on-surface mb-stack-sm">VISUAL SYSTEM</p>
+</div>
+<div class="col-span-4 md:col-span-8 flex flex-col gap-stack-md">
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface tracking-tight uppercase">
+                        Structure defined by <span class="text-primary italic font-normal">absence</span>. A typographic hierarchy built for impact.
+                    </h4>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-stack-md">
+<img alt="" class="w-full aspect-square object-cover" data-alt="A perfect circular black vinyl record isolated dramatically on a pure white background. Minimalist layout. Sharp, high-resolution capturing the subtle concentric grooves catching the light. Center label is stark black with tiny white helvetica typography, perfectly balanced. Modernist and sleek." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQVptMKU6v5LAfBX_U_qd8JalrZFVlszcyuFPKGC7xNea8VDyLf9pLyeK3d4V-bNPihWRrGmQLQh0HrvksOQgMrA1kDakagRcouH05qZqee2zK9p4q3CmnLNoN5u6YSoJ8Hc7KqbZSinmOYPhMDDBSh5F7g1BzYIW5VsmLOss2Y1drbsAhMizE3j-gChVnhwcWsrd-5I6oNuiMxlPYzGQlWo-L-Q2y6uXxrnOhAjGSPQ1kG8FvgOYX"/>
+<img alt="" class="w-full aspect-square object-cover" data-alt="A perfect circular black vinyl record isolated dramatically on a pure white background. Minimalist layout. Sharp, high-resolution capturing the subtle concentric grooves catching the light. Center label is stark white with deep black typographic elements. High contrast, precise, and purely structural in aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDhM9h-4TkPP1PeLA535U_4NLyuVaGkO4Nrazs2rt_1MqujmrLwm2dA1cCTdpGUCs8fVx59s2Kfe4AW1FzWkuKtuPb_xYAp1D4G8cU6r2wKBgvs_3PMZIwItPDmNiay5nPMImgY0cM549Y-COPjuq8w1gDlkVswkZgdNzhQgJKKjbVWOCDASPyR8qE8KSXDMczxKpU807WCQt1GFy2Ni19aAd9xmMRSP0NEVgh0EbnizycPtQsc4ed"/>
+<img alt="" class="w-full aspect-square object-cover" data-alt="A close-up segment of bold, ultra-heavy display typography printed on grainy, uncoated paper. The ink is dense black against the off-white paper stock, showing subtle printing imperfections and material texture. The macro framing abstracts the letterforms into pure geometric shapes and negative space. High contrast B&amp;W." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtTAONVl4MDr6L2_CQJXRj6D1QGxuRvYAxoh5xUgUs_4MbZCpqH1a0eBUSO3T0I4nosoxV56KZPJdeBH2tyEzBKQUk11Ve-useVOd58vf0Ez_d1XLkw4EWXE2HewNUe7dsT6Q48mf-cS4IQ1i7vb_yZvziJnOfEuaYgLtLBBZUaaeMLS6Jh4Zl2dcvIRv8o4hJSMGpF56yyADUD6D61523kXjy58mtJhN1s9Hp4XvX8OzXcopeNjiD"/>
+<img alt="" class="w-full aspect-square object-cover" data-alt="An abstract detail shot of folded paper layers creating harsh, diagonal shadows. The geometric purity of the lines creates an architectural feel. Black and white, minimalist, focusing entirely on form, light, and shadow to convey structural integrity in physical print design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwiSPNS8r8Ss26GWzcKX7NWaKP9IZk70L7p2yjQiV17AkxT3FQcF4pLeW3Vk1qX6DZcwicnRfZmIPfc9Qxt38SHSuOJr88FESGpERDwcoQ--k5FpzaIGoUSsDkRaqsZTrFSphQODYemMvy4HhVoq95YP9jqLYWU26NxqOGwIHPiV2M8sUwG5mId1t6nyyB5WmXzLCtFVACZNhjSkTSGBmNrab923LdmuY_pLmB64AF3PmVwr52IR8u"/>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="flex justify-between items-center w-full px-margin-desktop py-stack-sm bg-primary bottom-0 sticky z-40">
+<button class="font-label-caps text-label-caps text-on-primary px-4 py-2 flex items-center gap-2 hover:bg-on-primary hover:text-primary transition-none">
+<span class="material-symbols-outlined text-[16px]">arrow_back</span>
+<span class="hidden md:inline">PREVIOUS PROJECT</span>
+</button>
+<button class="font-label-caps text-label-caps text-on-primary px-4 py-2 flex items-center gap-2 hover:bg-on-primary hover:text-primary transition-none">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+<span class="hidden md:inline">BACK TO INDEX</span>
+</button>
+<button class="font-label-caps text-label-caps text-on-primary px-4 py-2 flex items-center gap-2 hover:bg-on-primary hover:text-primary transition-none">
+<span class="hidden md:inline">NEXT PROJECT</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</nav>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-start md:items-center w-full px-margin-desktop py-stack-lg gap-stack-md bg-background">
+<p class="font-meta-sm text-meta-sm text-on-surface-variant">© 2024 CREATIVE SIHYEON — PORTFOLIO</p>
+<div class="flex gap-stack-md">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary hover:underline transition-none opacity-100 hover:opacity-80" href="#">EMAIL</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary hover:underline transition-none opacity-100 hover:opacity-80" href="#">BEHANCE</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary hover:underline transition-none opacity-100 hover:opacity-80" href="#">NOTION</a>
+</div>
+</footer>
+</body></html>

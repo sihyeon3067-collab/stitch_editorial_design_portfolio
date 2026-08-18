@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wish Album — Creative Sihyeon</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#b40064",
+                      "background": "#fbf9f8",
+                      "secondary-fixed": "#e3e3de",
+                      "on-secondary-container": "#646561",
+                      "surface-container-high": "#e9e8e7",
+                      "secondary-container": "#e3e3de",
+                      "on-secondary-fixed": "#1b1c19",
+                      "surface-container-highest": "#e4e2e2",
+                      "on-surface-variant": "#594048",
+                      "secondary": "#5e5f5b",
+                      "primary-fixed-dim": "#ffb0ca",
+                      "on-primary-fixed-variant": "#8d004d",
+                      "on-primary-container": "#fffbff",
+                      "primary-container": "#da227d",
+                      "on-error-container": "#93000a",
+                      "on-secondary": "#ffffff",
+                      "inverse-on-surface": "#f2f0f0",
+                      "surface-tint": "#b90066",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "surface-container": "#efeded",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#1b1c1c",
+                      "on-primary-fixed": "#3e001f",
+                      "inverse-surface": "#303031",
+                      "on-secondary-fixed-variant": "#464744",
+                      "surface-variant": "#e4e2e2",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-background": "#1b1c1c",
+                      "on-error": "#ffffff",
+                      "on-tertiary-container": "#f7feff",
+                      "secondary-fixed-dim": "#c7c7c2",
+                      "surface": "#fbf9f8",
+                      "inverse-primary": "#ffb0ca",
+                      "error": "#ba1a1a",
+                      "outline-variant": "#e0bec7",
+                      "outline": "#8d6f78",
+                      "surface-bright": "#fbf9f8",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary": "#5d5c5b",
+                      "tertiary-fixed": "#e5e2e1",
+                      "tertiary-container": "#767474",
+                      "surface-dim": "#dbdad9",
+                      "primary-fixed": "#ffd9e3",
+                      "surface-container-low": "#f5f3f3",
+                      "tertiary-fixed-dim": "#c9c6c5",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "24px",
+                      "margin-desktop": "64px",
+                      "section-gap": "160px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "stack-lg": "48px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "meta-sm": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-xl": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-lg-mobile": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "80px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "52px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "meta-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "18px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-xl": [
+                              "120px",
+                              {
+                                      "lineHeight": "110px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "36px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "15px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "56px",
+                              {
+                                      "lineHeight": "54px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "800"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom experimental styles */
+        .bleed-text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background top-0 sticky z-50 transition-colors duration-0 flex justify-between items-center w-full px-margin-desktop py-stack-md max-w-full">
+<a class="text-headline-md font-headline-md font-extrabold text-on-surface dark:text-on-surface hover:text-primary transition-colors duration-0" href="#">
+            CREATIVE SIHYEON
+        </a>
+<nav class="hidden md:flex gap-gutter">
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps hover:text-primary transition-colors duration-0" href="#">WORK</a>
+<a class="text-primary font-bold line-through font-label-caps text-label-caps hover:text-primary transition-colors duration-0 scale-100 transition-none" href="#">PROJECT</a>
+<a class="text-on-surface dark:text-on-surface font-label-caps text-label-caps hover:text-primary transition-colors duration-0" href="#">CONTACT</a>
+</nav>
+<button class="md:hidden text-on-surface material-symbols-outlined hover:text-primary transition-colors duration-0">menu</button>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="px-margin-desktop pt-stack-lg pb-section-gap">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter mb-stack-lg">
+<div class="col-span-4 md:col-span-8 flex flex-col justify-end">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface uppercase leading-none">
+                        WISH ALBUM
+                    </h1>
+</div>
+<div class="col-span-4 md:col-span-4 flex flex-col justify-end items-end text-right">
+<div class="font-meta-sm text-meta-sm text-on-surface uppercase">
+<p class="text-secondary">Project Type</p>
+<p>Album Design</p>
+</div>
+<div class="font-meta-sm text-meta-sm text-on-surface uppercase mt-4">
+<p class="text-secondary">Year</p>
+<p>2024</p>
+</div>
+</div>
+</div>
+<!-- Hero Image -->
+<div class="w-full aspect-[16/9] md:aspect-[21/9] bg-surface-container relative overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" data-alt="A highly detailed conceptual photography shot of a luxury music album package. The scene features a sleek, minimalist vinyl record slipping out of a beautifully textured, soft pink and stark white cardboard sleeve. The lighting is high-key and studio-quality, casting crisp, modern shadows on a pristine white surface, emphasizing the tactile quality of the materials and a nostalgic yet sophisticated mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwpNPGN4xT9B2CHs56w9oYMSOuEv2tr9_j9u8oCS2YKxCpDnCCcqQqXDnSe3wKzApUhUeBrmul-BOUV-QQoS5r4kk0LPO6SyUXoYjJVrrzLMvvNUxsAz8r6waCWf4lKY_aU8haFV0CfsAA_GwNZLjF6_c_1cykpHywrNCn6M49i3oOKDhDoby4Lcq1Ov-GkCiyLQV0ygPZKfoULWORRsi2w6WdCGTyvLOH-MAA-Dv68aOJmCMfNsEp"/>
+<!-- Large Number Watermark overlaying image -->
+<div class="absolute -bottom-8 -left-4 font-display-xl text-display-xl text-primary mix-blend-multiply opacity-80 pointer-events-none">
+                    01
+                </div>
+</div>
+</section>
+<!-- Project Concept & Details -->
+<section class="px-margin-desktop pb-section-gap">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
+<!-- Abstract Text Block -->
+<div class="col-span-4 md:col-span-4 md:col-start-2 flex flex-col gap-stack-md">
+<h2 class="font-label-caps text-label-caps text-on-surface uppercase">About</h2>
+<p class="font-body-lg text-body-lg text-on-surface">
+                        The "Wish Album" visual identity explores the intersection of nostalgic artifacts and contemporary luxury. By reimagining the physical music format as a high-end collectible, the design language utilizes stark contrasts, minimal typography, and a signature primary pink hue to elevate the tactile experience of listening.
+                    </p>
+</div>
+<!-- Supporting Image -->
+<div class="col-span-4 md:col-span-6 md:col-start-7 mt-stack-lg md:mt-0">
+<img class="w-full h-auto object-cover border border-surface-container-high" data-alt="A close-up, editorial-style photograph of a compact disc and its jewel case resting on a minimalist concrete plinth. The CD reflects a subtle holographic sheen under bright, directional gallery lighting. The composition is highly structured, emphasizing extreme negative space and geometric precision, aligning with a modernist communication design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkCxeN6HyCBWsQGdzh_4inN3NEa8lWmg4Jw4nnTFUFb0gt4uJKr5uLK2Yn0Li4NNSP4JfDLmL0ntbwFlO3vzKMgj34d0TW4ehy56_juVMVLvGlXiHf7gIzgJKTimo8i-oln37jgY5Rbq8_KokFIPSUn_mNfuyYwwOhHEl7P-4YdA6slygGx-whnyy59TLJFf4fJ8LTw24kxu7FCMFcElxYQVMgQr4f5HCQYVSB4yiGq6X-obylgTKm"/>
+</div>
+</div>
+</section>
+<!-- Image Gallery Grid -->
+<section class="px-margin-desktop pb-section-gap">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter items-center">
+<!-- Vertical Image -->
+<div class="col-span-4 md:col-span-5">
+<img class="w-full aspect-[3/4] object-cover" data-alt="A striking still-life image of an opened photobook from the album packaging, filled with avant-garde editorial photography. The book lies flat on an expansive, flawless pink background. The stark contrast between the intricate inner pages and the flat tonal plane of the background highlights the premium, highly structured nature of the layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDow2omW9i_UnID2qvLsLLmMSCTzO5vUbT7yfMgOUF5P-c8wOS_W4t2MKyDtnIBXoRZ9uU4HInbz3mYTql_f0Y1BiNEhdEDIqpmycvS8XIvw-FZSiNULm_KNeD9Ba8WUfOnWoH-tgvjbWvAt9QEjTDXkzprBfP-z8poLzjQ7PWjAzDJjkkOtX89v84SeG2thCc2n5uEKoyLhNR5Pqu7Tp1gxNDvviA8VlZum2Q-uU2qLjS4avz-1t5m"/>
+</div>
+<!-- Offset Grid -->
+<div class="col-span-4 md:col-span-6 md:col-start-7 flex flex-col gap-stack-lg mt-stack-lg md:mt-0">
+<div class="aspect-square bg-on-surface flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover mix-blend-luminosity opacity-80 hover:opacity-100 transition-opacity" data-alt="A detail shot showing crisp, minimal typography printed in silver foil on a deep black matte paper texture. The lighting is focused purely on the reflective typography, creating a sense of quiet confidence and intellectual rigor typical of high-end design portfolios." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb6wZZudtkjiYMnMMSmmw26nhAa0eA6_8I8HdkneJC6kR7H7vgI1KaYeoCWNCdAXrBqYeuH1xPM83Yj-yQaCVcNtnazmavrsgqSo67opCBaw1ui8DNxC5HCXSKMPQ4ZAPYYamlPfP873QasL3syPKpAxbcjBdrEmmVqiazoLvfPUnAoiOb8qToOQNYpMszEQqH11a-niI-ouFhjGngyAZDuVfLWiregWScAMAOhPkr6l01e9VTVyBb"/>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<img class="w-full aspect-square object-cover" data-alt="A top-down view of several flatly colored pink and white packaging elements arranged geometrically on a light grey surface. The arrangement is precise and grid-like, mimicking the asymmetric fluid grid of modern web and print design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzQ88w5qi8Yp40Bd9NLsM6MqQ7OMu0-OIlGBOEg1bbKU2RCfa7-7_VKjjhhxa28WC4_OPAWnVydtpYvX8dJ3zhsh2dYr23qFn6yDwlD709vwgBNt9Eo1EgNvnQAv0JGhm2gvpc0k6YhN-WR3SYCEMXl0Hk2T0eL5fUAm7TeDqaBTDT7P9q2hFXO7YdQ9tVWzadKs1rUwyQ5I4LBkWvW5oFy58VU1pZasm_a-E7Xbl53qTF1lAhq8l-"/>
+<div class="w-full aspect-square bg-primary flex items-end p-4">
+<span class="font-label-caps text-label-caps text-on-primary">Physical Artifacts</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Large Typography Break -->
+<section class="w-full bg-primary py-section-gap overflow-hidden flex items-center justify-center">
+<div class="font-display-xl text-display-xl text-on-primary uppercase text-center bleed-text tracking-tighter w-[150%] transform -rotate-2">
+                 Nostalgic Luxury
+             </div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-primary dark:bg-primary flex justify-between items-center w-full px-margin-desktop py-stack-sm docked full-width">
+<a class="text-on-primary px-4 py-2 hover:bg-on-primary hover:text-primary transition-none flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_back</span>
+<span class="font-label-caps text-label-caps hidden md:inline">PREVIOUS PROJECT</span>
+</a>
+<a class="bg-on-primary text-primary px-4 py-2 hover:bg-on-primary hover:text-primary transition-none scale-100 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="font-label-caps text-label-caps hidden md:inline">BACK TO INDEX</span>
+</a>
+<a class="text-on-primary px-4 py-2 hover:bg-on-primary hover:text-primary transition-none flex items-center gap-2" href="#">
+<span class="font-label-caps text-label-caps hidden md:inline">NEXT PROJECT</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-background dark:bg-background flex flex-col md:flex-row justify-between items-start md:items-center w-full px-margin-desktop py-stack-lg gap-stack-md full-width no-borders">
+<p class="font-meta-sm text-meta-sm text-on-surface dark:text-on-surface">
+            © 2024 CREATIVE SIHYEON — PORTFOLIO
+        </p>
+<div class="flex gap-gutter">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary underline transition-none" href="#">EMAIL</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary underline transition-none" href="#">BEHANCE</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary underline transition-none" href="#">NOTION</a>
+</div>
+</footer>
+</body></html>

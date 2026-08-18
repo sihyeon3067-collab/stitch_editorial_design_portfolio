@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>02 - Wave Motion | CREATIVE SIHYEON</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#b40064",
+                    "background": "#fbf9f8",
+                    "secondary-fixed": "#e3e3de",
+                    "on-secondary-container": "#646561",
+                    "surface-container-high": "#e9e8e7",
+                    "secondary-container": "#e3e3de",
+                    "on-secondary-fixed": "#1b1c19",
+                    "surface-container-highest": "#e4e2e2",
+                    "on-surface-variant": "#594048",
+                    "secondary": "#5e5f5b",
+                    "primary-fixed-dim": "#ffb0ca",
+                    "on-primary-fixed-variant": "#8d004d",
+                    "on-primary-container": "#fffbff",
+                    "primary-container": "#da227d",
+                    "on-error-container": "#93000a",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f2f0f0",
+                    "surface-tint": "#b90066",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "surface-container": "#efeded",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1b1c1c",
+                    "on-primary-fixed": "#3e001f",
+                    "inverse-surface": "#303031",
+                    "on-secondary-fixed-variant": "#464744",
+                    "surface-variant": "#e4e2e2",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "on-background": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#f7feff",
+                    "secondary-fixed-dim": "#c7c7c2",
+                    "surface": "#fbf9f8",
+                    "inverse-primary": "#ffb0ca",
+                    "error": "#ba1a1a",
+                    "outline-variant": "#e0bec7",
+                    "outline": "#8d6f78",
+                    "surface-bright": "#fbf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#5d5c5b",
+                    "tertiary-fixed": "#e5e2e1",
+                    "tertiary-container": "#767474",
+                    "surface-dim": "#dbdad9",
+                    "primary-fixed": "#ffd9e3",
+                    "surface-container-low": "#f5f3f3",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "margin-desktop": "64px",
+                    "section-gap": "160px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "stack-lg": "48px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "meta-sm": ["Inter"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "display-xl": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["80px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                    "headline-lg": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                    "meta-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0em", "fontWeight": "500" }],
+                    "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                    "display-xl": ["120px", { "lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                    "headline-md": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+                    "display-lg-mobile": ["56px", { "lineHeight": "54px", "letterSpacing": "-0.04em", "fontWeight": "800" }]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased">
+<!-- TopNavBar -->
+<nav class="bg-background dark:bg-background top-0 sticky flex justify-between items-center w-full px-margin-desktop py-stack-md max-w-full z-50">
+<div class="text-headline-md font-headline-md font-extrabold text-on-surface dark:text-on-surface">
+            CREATIVE SIHYEON
+        </div>
+<ul class="hidden md:flex gap-stack-md items-center font-label-caps text-label-caps">
+<li>
+<a class="text-on-surface dark:text-on-surface font-label-caps hover:text-primary transition-colors duration-0" href="#">WORK</a>
+</li>
+<li>
+<a class="text-primary font-bold line-through hover:text-primary transition-colors duration-0 scale-100 transition-none" href="#">PROJECT</a>
+</li>
+<li>
+<a class="text-on-surface dark:text-on-surface font-label-caps hover:text-primary transition-colors duration-0" href="#">CONTACT</a>
+</li>
+</ul>
+</nav>
+<main class="w-full">
+<!-- Hero Section: High contrast, dark background for 3D visual pop -->
+<section class="bg-inverse-surface text-inverse-on-surface w-full min-h-[90vh] flex flex-col justify-end px-margin-desktop py-section-gap relative">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40 mix-blend-screen" data-alt="A highly complex 3D motion graphics scene featuring abstract, undulating waves of chrome and deep magenta liquid. The composition is highly dynamic and rhythmic, capturing a freeze-frame of intense energy. Lighting is dramatic, with deep shadows and specular highlights emphasizing the 3D geometry against a pitch-black background, fitting a high-end minimalist design portfolio." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXEDBV6IiIYJjG3MKONYGQLyfPgJVtbxaV4DMGL7L-tsfRs2bBEIeX7L2NXUoEzylTOx_G7OvkwH9AZP8Rf3qUC6ehI47ZX1XZNvQjSIaOpSPrNddMAwhagW8bJVBSQGISOuYroGlVGXOzz_oRLwNP4qRBKiJtNzDU0-DMr1pufAxKOFEBYPQWEJKEy9vpMn5cTiYtuIRX6zjFlzdKdQgaKvfIztriLbTXLcwgoopwUkLS1LdNgQJ2')"></div>
+</div>
+<div class="relative z-10 flex flex-col items-start gap-stack-lg max-w-5xl">
+<span class="font-display-xl text-display-xl text-primary mix-blend-difference">02</span>
+<h1 class="font-display-lg text-display-lg uppercase tracking-tighter mix-blend-difference">
+                    Wave<br/>Motion
+                </h1>
+<div class="flex flex-col md:flex-row gap-gutter font-meta-sm text-meta-sm mt-stack-md">
+<div class="flex flex-col gap-1">
+<span class="text-surface-variant">PROJECT TYPE</span>
+<span class="font-bold">3D Motion / Typography</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-surface-variant">YEAR</span>
+<span class="font-bold">2024</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Intro: Asymmetric Grid -->
+<section class="px-margin-desktop py-section-gap w-full">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 flex flex-col gap-stack-md">
+<h2 class="font-headline-md text-headline-md font-bold">ABOUT</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        An exploration of physical dynamics translated into digital typography. The Wave Motion project captures the tension between rigid grids and fluid momentum. By simulating liquid physics on typography arrays, we created a rhythmic visual system that constantly redefines its boundaries.
+                    </p>
+</div>
+<div class="md:col-span-8 md:col-start-5 mt-margin-mobile md:mt-0">
+<img class="w-full h-auto object-cover aspect-video bg-surface-container" data-alt="A macro shot of a complex 3D typography grid distorting as if pushed by a physical wave of water. The letters are made of a semi-transparent glass material, refracting bright, sterile white light. The background is a clean, minimalist flat off-white plane, contrasting with the intense geometric distortion of the letterforms." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACiEkx1jk4QVNBc-uF4DkUY0e6AO3hVpraYH0I-ck7KChU9nsEoB9vinAV01MGpMKnuCUllTL8QRyBkqLeooepfyllv67oX1CSkC7yeKspKdqfC3nPImFWRzc45df8F7pZkb8dQ-JYM_QaRs0Qj4BsQbReyJAM8qeEw3ThS3Ytg0mivSYKHeENKXeqPD_p7zlj2KUg0MXCyuxDevCzJhjwBsWJ7FjmbS4Po6a73cNT0A6zihkDOUeC"/>
+</div>
+</div>
+</section>
+<!-- Process/Visuals: Dark Section for Rhythmic Flow -->
+<section class="bg-on-surface text-background px-margin-desktop py-section-gap w-full flex flex-col gap-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7">
+<img class="w-full h-auto object-cover bg-inverse-surface mix-blend-lighten" data-alt="Three sequential frames of a 3D animation showing a solid sphere shattering into thousands of perfectly cubic particles. The particles flow in a sine-wave pattern across the frame. High contrast monochromatic lighting with intense neon pink accents on the leading edges of the particle wave. Set against a profound black void, reflecting modernist digital art aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2yDSgP9SAjJ14UEZO4H-gUsQ9xrYiWcWOuAq7V90ZweVJBH8eMMicSPJMlFwBB9GrK8IlUcjfVHMF1NVH-TzW0-LfiD2h5x6ouO9aSSwJ5BAHdzQqmjMm9uU64dYpPLmSixPFGW3dZjYE50l5HjTVM-v6rHlWPut8x51aZXGaywig4u2ITq3fW8113g3FVhux0UeUi-mU5rCKUeeao6HvJPRi9TpDt1nWvId4DvcJsZd2AIJBS-Pu"/>
+</div>
+<div class="md:col-span-4 md:col-start-9 flex flex-col gap-stack-md">
+<h3 class="font-headline-md text-headline-md font-bold text-primary">RHYTHM &amp;<br/>COLLISION</h3>
+<p class="font-body-md text-body-md text-inverse-on-surface opacity-80">
+                        The core visual thesis relies on high-speed collision mechanics slowed to a hypnotic pace. The resulting forms dictate the layout, breaking standard typographic rules while maintaining a structured chaos.
+                    </p>
+</div>
+</div>
+<!-- Grid of explorations -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter w-full">
+<div class="aspect-square bg-inverse-surface">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300" data-alt="A perfect square crop of abstract 3D rendered waves, composed entirely of thin, hair-like glowing strands in magenta and white, overlapping against deep black." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPjdZKcFGW3torrjANnWKfHCDx0m732l9K7yFtoTMectGxtNiNfnfbE1ZBXfENZ1np7noyVXZElIha3kWhcW3Fp_wNO-rUBvH8C9EuyC7pqrRrkcQ-L-9F6qwjU9BOhYkiu2802D90sePc1X3upuSnod7HB6AHx1QVI2H3Zyw2jhYMFKMDr5SRF858FEpfG6o_d7CINg5qHHLBMxjcq_jtSHcQVeDCIYtKMUMmXjZa_LvRgnIH9Ydt"/>
+</div>
+<div class="aspect-square bg-inverse-surface">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300" data-alt="A perfect square crop showing a close-up of metallic typography submerged in a thick, dark liquid, with ripples distorting the bold letterforms. Minimalist black and white palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuQsUm_oh7NPMTR7vuz1DOTIEb_ZBLL1Bwy9bvBt94gWxFkoX7goftfgnd2V5S90UHuwKNi78j496Trqauka43XYBvWTvxvTNWAvq5i3gbyPL1M5QE49jxD4s2Qif0tlzhlRmLoA1j0OGF8dGnO5FTtSfClYsgCqHTHexTOws-G1AxRSErvoV3FWqEW1r7c1q4sEk2pphxf_g8B0k0lwrjF040N72W3jKWWM3Fc3Dm7MMaYeqk6iD7"/>
+</div>
+<div class="aspect-square bg-inverse-surface">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300" data-alt="A perfect square crop displaying high-contrast geometric 3D spikes emerging from a smooth flat surface, casting long, sharp shadows. Lit with a stark, brutalist lighting style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBH0e3_-tUaQcKAFImfa4_2ehczEiLi84oWhtm4IqnIFIr5aYiEvimT5-Wvb-APrsEEDLfy0uW46pRbrqyROUWbmgVLXzpCcg5eXeHV4aOcDWF9ROuBV4xptHwESThgpWvyiARRCXZJzlOnHsXTzLF0MUA1-NR-UBMi5duzRgb9C9jVyC8DVRxPKi8V1NVXZk-cCe8Q2T13UhbWXe48OmLas68AXkIhVRGVpITb5Rkd44BbGdifIBVK"/>
+</div>
+<div class="aspect-square bg-inverse-surface">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300" data-alt="A perfect square crop featuring abstract fluid dynamics frozen in time, resembling an ink drop in water but rendered in high-fidelity 3D with a sleek, digital artifact aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBK71CyZWQldGKm5GBxNlgOw6Ap-hcGtsSBObxQZwIEqOJbfx49vGKbX36ghb56zbsRMJA6kqLJ0XJzLh0d1drxo2LtQOsBPTROskxn9JzMW6SXtWhpEz8W73QDvrhai3z9lHbHxeH30x7j1T0NIwIpBsZ7R-nFaPu4peTdMdRatceCfThvQnEWkxNVnTEa4Zy3FpDvqsTDj-woY1R61H_JEoIqTVj6yjj7iScb-FFOkomAspVW7JF"/>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-primary dark:bg-primary flex justify-between items-center w-full px-margin-desktop py-stack-sm docked full-width bottom-0">
+<button class="flex items-center gap-2 text-on-primary px-4 py-2 hover:bg-on-primary hover:text-primary transition-none font-label-caps text-label-caps">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_back</span>
+            PREVIOUS PROJECT
+        </button>
+<button class="flex items-center gap-2 bg-on-primary text-primary px-4 py-2 scale-100 font-label-caps text-label-caps font-bold">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+            BACK TO INDEX
+        </button>
+<button class="flex items-center gap-2 text-on-primary px-4 py-2 hover:bg-on-primary hover:text-primary transition-none font-label-caps text-label-caps">
+            NEXT PROJECT
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+</button>
+</nav>
+<!-- Footer -->
+<footer class="bg-background dark:bg-background flex flex-col md:flex-row justify-between items-start md:items-center w-full px-margin-desktop py-stack-lg gap-stack-md full-width bottom-0 no-borders">
+<div class="font-meta-sm text-meta-sm text-on-surface dark:text-on-surface">
+            © 2024 CREATIVE SIHYEON — PORTFOLIO
+        </div>
+<ul class="flex flex-col md:flex-row gap-stack-md font-label-caps text-label-caps">
+<li>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary underline transition-none" href="#">EMAIL</a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary underline transition-none" href="#">BEHANCE</a>
+</li>
+<li>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary underline transition-none" href="#">NOTION</a>
+</li>
+</ul>
+</footer>
+</body></html>
