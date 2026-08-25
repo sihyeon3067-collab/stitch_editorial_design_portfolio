@@ -1,11 +1,9 @@
-<!-- index.html -->
-
 <!doctype html>
-<html class="light" lang="ko" style="">
+<html class="light" lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Creative Sihyeon - Portfolio Index</title>
+    <title>Creative Sihyeon - Portfolio</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -20,174 +18,8 @@
     />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Tailwind Config -->
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              'surface-container-low': '#f5f3f3',
-              'on-secondary-fixed-variant': '#464744',
-              'on-secondary-container': '#646561',
-              'secondary-fixed': '#e3e3de',
-              'tertiary-fixed-dim': '#c9c6c5',
-              secondary: '#5e5f5b',
-              'on-error-container': '#93000a',
-              'surface-container-highest': '#e4e2e2',
-              'primary-fixed-dim': '#ffb0ca',
-              'inverse-surface': '#303031',
-              'on-tertiary': '#ffffff',
-              'outline-variant': '#e0bec7',
-              surface: '#fbf9f8',
-              'on-secondary': '#ffffff',
-              tertiary: '#5d5c5b',
-              'on-tertiary-fixed-variant': '#474646',
-              'primary-fixed': '#ffd9e3',
-              'tertiary-container': '#767474',
-              'on-secondary-fixed': '#1b1c19',
-              'inverse-primary': '#ffb0ca',
-              'on-primary': '#ffffff',
-              'primary-container': '#da227d',
-              background: '#fbf9f8',
-              'surface-container': '#efeded',
-              'error-container': '#ffdad6',
-              'on-primary-fixed': '#3e001f',
-              'on-tertiary-container': '#f7feff',
-              'on-primary-fixed-variant': '#8d004d',
-              'on-background': '#1b1c1c',
-              'surface-dim': '#dbdad9',
-              'on-surface': '#1b1c1c',
-              'tertiary-fixed': '#e5e2e1',
-              'on-tertiary-fixed': '#1c1b1b',
-              'surface-container-high': '#e9e8e7',
-              'surface-tint': '#b90066',
-              'on-primary-container': '#fffbff',
-              'on-surface-variant': '#594048',
-              'surface-container-lowest': '#ffffff',
-              'inverse-on-surface': '#f2f0f0',
-              error: '#ba1a1a',
-              'secondary-fixed-dim': '#c7c7c2',
-              'on-error': '#ffffff',
-              'surface-variant': '#e4e2e2',
-              'secondary-container': '#e3e3de',
-              primary: '#ff4499',
-              'surface-bright': '#fbf9f8',
-              outline: '#8d6f78',
-            },
-            borderRadius: {
-              DEFAULT: '0.25rem',
-              lg: '0.5rem',
-              xl: '0.75rem',
-              full: '9999px',
-            },
-            spacing: {
-              'stack-sm': '8px',
-              gutter: '24px',
-              'stack-lg': '48px',
-              'section-gap': '160px',
-              'stack-md': '24px',
-              'margin-desktop': '64px',
-              'margin-mobile': '20px',
-            },
-            fontFamily: {
-              'headline-lg': ['Hanken Grotesk'],
-              'display-lg-mobile': ['Hanken Grotesk'],
-              'meta-sm': ['Inter'],
-              'display-lg': ['Hanken Grotesk'],
-              'body-md': ['Inter'],
-              'display-xl': ['Hanken Grotesk'],
-              'label-caps': ['Hanken Grotesk'],
-              'headline-md': ['Hanken Grotesk'],
-              'body-lg': ['Inter'],
-            },
-            fontSize: {
-              'headline-lg': [
-                '48px',
-                {
-                  lineHeight: '52px',
-                  letterSpacing: '-0.02em',
-                  fontWeight: '700',
-                },
-              ],
-              'display-lg-mobile': [
-                '56px',
-                {
-                  lineHeight: '54px',
-                  letterSpacing: '-0.04em',
-                  fontWeight: '800',
-                },
-              ],
-              'meta-sm': [
-                '12px',
-                {
-                  lineHeight: '18px',
-                  letterSpacing: '0em',
-                  fontWeight: '500',
-                },
-              ],
-              'display-lg': [
-                '80px',
-                {
-                  lineHeight: '80px',
-                  letterSpacing: '-0.04em',
-                  fontWeight: '800',
-                },
-              ],
-              'body-md': [
-                '15px',
-                {
-                  lineHeight: '24px',
-                  letterSpacing: '0em',
-                  fontWeight: '400',
-                },
-              ],
-              'display-xl': [
-                '120px',
-                {
-                  lineHeight: '110px',
-                  letterSpacing: '-0.04em',
-                  fontWeight: '800',
-                },
-              ],
-              'label-caps': [
-                '12px',
-                {
-                  lineHeight: '16px',
-                  letterSpacing: '0.1em',
-                  fontWeight: '700',
-                },
-              ],
-              'headline-md': [
-                '32px',
-                {
-                  lineHeight: '36px',
-                  letterSpacing: '-0.02em',
-                  fontWeight: '700',
-                },
-              ],
-              'body-lg': [
-                '18px',
-                {
-                  lineHeight: '28px',
-                  letterSpacing: '-0.01em',
-                  fontWeight: '400',
-                },
-              ],
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      .material-symbols-outlined {
-        font-variation-settings:
-          'FILL' 1,
-          'wght' 400,
-          'GRAD' 0,
-          'opsz' 24;
-      }
-    </style>
+    <script src="tailwind-config.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body
     class="bg-background text-on-surface antialiased overflow-x-hidden selection:bg-primary selection:text-on-primary"
@@ -229,15 +61,18 @@
         >
       </div>
     </nav>
+
     <!-- Hero Section -->
     <section
-      class="w-full relative bg-[#3a1c24] flex items-center justify-center overflow-hidden aspect-[4/3] md:aspect-[21/9]"
+      class="w-full relative bg-[#3a1c24] flex items-center justify-center overflow-hidden aspect-[4/3] md:aspect-[16/9]"
     >
       <img
         alt="Hero background"
-        class="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-overlay"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCETXT7zkqhPS1p4Mr8iujXhBRxXgQe1IEsR-NLJdnOQTKJMbG6J275iemta9snn0_4f1J6Gjj3-i-qerRccOC4IMdAcXg8KQoJBHQ0oZPNoZeMf9iaaNwbR-x1WsDwM5EWwablwHO8lco0XSQWXPcnHMPE2tlpTe9Jn3jFxS8l8eqMnesxfN__MeY-Irp3LVaAPFXvdooNiJOrhAuJUnAorA8Abz-g2MhHMUB6k7BD2aIgJ7-u7rfI"
+        class="absolute inset-0 w-full h-full object-cover"
+        src="assets/prakriti-khajuria-r7y6h0P1KGE-unsplash.jpg"
       />
+      <div class="absolute inset-0 bg-[#0a0808]/40 opacity-20"></div>
+
       <div class="relative z-10 flex flex-col items-center text-center px-4">
         <h1
           class="font-display-lg text-white font-extrabold uppercase leading-none tracking-tighter mb-2 text-4xl md:text-8xl"
@@ -245,12 +80,15 @@
           CREATIVE<br />SIHYEON
         </h1>
         <p class="text-white text-lg md:text-xl font-body-md tracking-wider">
-          상상을 디자인하다
+          창의력을 디자인하다
         </p>
       </div>
     </section>
+
     <!-- Main Content Canvas -->
-    <main class="w-full flex flex-col pt-16 md:pt-32 pb-32 bg-white relative">
+    <main
+      class="w-full flex flex-col pt-16 md:pt-32 pb-32 relative bg-[linear-gradient(180deg,#381121_0%,#611a27_25%,#ffffff_35%,#ffffff_100%)]"
+    >
       <!-- Decorative Bubbles -->
       <div
         class="absolute w-8 h-8 rounded-full bg-primary/40 top-[30%] left-[40%]"
@@ -270,109 +108,113 @@
       <div
         class="absolute w-8 h-8 rounded-full bg-primary/40 top-[80%] right-[15%]"
       ></div>
+
       <!-- ABOUT Section -->
       <section
-        class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop w-full mb-32 relative z-10"
+        class="max-w-8xl mx-auto px-margin-mobile md:px-margin-desktop w-full mb-32 relative z-10"
       >
-        <h2 class="font-headline-md text-headline-md font-bold mb-8 uppercase">
-          ABOUT
-        </h2>
-        <div
-          class="bg-[#fcf5f7] p-8 md:p-16 mb-8 flex justify-center items-center rounded-sm"
-        >
+        <div>
+          <h2
+            class="font-headline-md text-headline-md font-bold mb-8 uppercase text-[#a6465d]"
+          >
+            ABOUT
+          </h2>
           <img
             alt="Pink card stack"
-            class="max-w-full md:max-w-2xl mix-blend-multiply drop-shadow-2xl hover:scale-105 transition-transform duration-500"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiue4No5-gSIPpGxJHXcUHTN3IKJUBEMVRIx4PChvbEWkgc5B-GgS09F9UATevnIHzMpklqDavXbKhTSMcCeEPYjotMf5Tdy7CaHg36NdcRU59QhlIYiz3utpUSB2TgPy8RQr0Rwizq4x3NvYMSIRE7xBzTS4UXOgVXwg2noNtG0yyJmYwKNE5vZTkr-_CG-GjBCrb-KlIa3BrGnM9_jE2dcnL_RQnoJcp8zpyehotNMij4-CC-rww"
+            class="w-full h-[320px] md:h-[700px] object-cover mix-blend-multiply drop-shadow-2xl hover:scale-[1.03] transition-transform duration-500 mb-8"
+            src="assets/목1.png"
           />
-        </div>
-        <div class="max-w-3xl mb-16">
-          <p
-            class="font-body-lg text-body-lg text-on-surface leading-relaxed border-b-2 border-primary inline-block mb-4"
-          >
-            창의적인 상상력을 지닌 Creative 시현입니다.
-          </p>
-          <p class="font-body-md text-on-surface-variant leading-relaxed">
-            일상에서의 작은 아이디어도 놓치지 않고 메모하는 습관을 가진
-            디자이너입니다. 포스터와 타이포를 주력으로 그래픽 디자인을 공부하고
-            있습니다.
-          </p>
-        </div>
-        <div
-          class="bg-[#fcf5f7] p-8 md:p-12 rounded-sm flex flex-col md:flex-row gap-16 md:gap-32"
-        >
-          <div class="flex-1">
-            <h3 class="font-headline-md text-xl font-bold mb-6 uppercase">
-              EDUCATION
-            </h3>
-            <ul class="space-y-4 relative border-l border-on-surface/20 pl-6">
-              <li class="relative">
-                <span
-                  class="absolute -left-[29px] top-2 w-2 h-2 bg-on-surface rounded-full"
-                ></span>
-                <div class="flex gap-4">
-                  <span class="font-meta-sm text-on-surface-variant w-20"
-                    >2021.03</span
-                  >
-                  <span class="font-body-md font-bold">상일고등학교</span>
-                </div>
-              </li>
-              <li class="relative">
-                <span
-                  class="absolute -left-[29px] top-2 w-2 h-2 bg-on-surface rounded-full"
-                ></span>
-                <div class="flex gap-4">
-                  <span class="font-meta-sm text-on-surface-variant w-20"
-                    >2025.03~</span
-                  >
-                  <div class="flex flex-col">
-                    <span class="font-body-md font-bold"
-                      >상명대학교 재학 중</span
-                    >
-                    <span class="font-meta-sm text-on-surface-variant"
-                      >커뮤니케이션디자인전공</span
-                    >
-                  </div>
-                </div>
-              </li>
-            </ul>
+          <div class="max-w-3xl mb-16">
+            <p
+              class="font-body-lg text-body-lg leading-relaxed border-b-2 border-[#d97b8f] inline-block mb-4 text-[#a6465d]"
+            >
+              창의적인 상상력을 지닌 Creative 시현입니다.
+            </p>
+            <p class="font-body-md leading-relaxed text-[#000000]">
+              일상에서의 작은 아이디어도 놓치지 않고 메모하는 습관을 통해
+              창의적인 결과를 만들어내는 디자이너입니다.
+            </p>
+            <p class="font-body-md leading-relaxed text-[#]">
+              포스터 디자인과 타이포그래피를 주력으로 그래픽 중심의 작업을 하고
+              있습니다.
+            </p>
           </div>
-          <div class="flex-1">
-            <h3 class="font-headline-md text-xl font-bold mb-6 uppercase">
-              TOOL
-            </h3>
-            <div class="flex flex-wrap gap-4">
-              <div
-                class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
-              >
-                Ps
-              </div>
-              <div
-                class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
-              >
-                Ai
-              </div>
-              <div
-                class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
-              >
-                Id
-              </div>
-              <div
-                class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
-              >
-                <span class="material-symbols-outlined"
-                  >motion_photos_auto</span
+          <div
+            class="bg-[#fcf5f7] p-8 md:p-12 rounded-sm flex flex-col md:flex-row gap-16 md:gap-32"
+          >
+            <div class="flex-1">
+              <h3 class="font-headline-md text-xl font-bold mb-6 uppercase">
+                EDUCATION
+              </h3>
+              <ul class="space-y-4 relative border-l border-on-surface/20 pl-6">
+                <li class="relative">
+                  <span
+                    class="absolute -left-[29px] top-2 w-2 h-2 bg-on-surface rounded-full"
+                  ></span>
+                  <div class="flex gap-4">
+                    <span class="font-meta-sm text-on-surface-variant w-20"
+                      >2021.03</span
+                    >
+                    <span class="font-body-md font-bold">상일고등학교</span>
+                  </div>
+                </li>
+                <li class="relative">
+                  <span
+                    class="absolute -left-[29px] top-2 w-2 h-2 bg-on-surface rounded-full"
+                  ></span>
+                  <div class="flex gap-4">
+                    <span class="font-meta-sm text-on-surface-variant w-20"
+                      >2025.03~</span
+                    >
+                    <div class="flex flex-col">
+                      <span class="font-body-md font-bold"
+                        >상명대학교 재학 중</span
+                      >
+                      <span class="font-meta-sm text-on-surface-variant"
+                        >커뮤니케이션디자인전공</span
+                      >
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-headline-md text-xl font-bold mb-6 uppercase">
+                TOOL
+              </h3>
+              <div class="flex flex-wrap gap-4">
+                <div
+                  class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
                 >
-              </div>
-              <div
-                class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
-              >
-                Ae
-              </div>
-              <div
-                class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
-              >
-                <span class="material-symbols-outlined">play_circle</span>
+                  Ps
+                </div>
+                <div
+                  class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
+                >
+                  Ai
+                </div>
+                <div
+                  class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
+                >
+                  Id
+                </div>
+                <div
+                  class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
+                >
+                  <span class="material-symbols-outlined"
+                    >motion_photos_auto</span
+                  >
+                </div>
+                <div
+                  class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
+                >
+                  Ae
+                </div>
+                <div
+                  class="w-12 h-12 border-2 border-on-surface flex items-center justify-center font-bold font-body-md bg-white"
+                >
+                  <span class="material-symbols-outlined">play_circle</span>
+                </div>
               </div>
             </div>
           </div>
@@ -382,7 +224,7 @@
       <section class="w-full relative z-10 flex flex-col md:flex-row">
         <!-- Left Graphic Area -->
         <div
-          class="w-full md:w-1/2 relative min-h-[600px] md:min-h-[800px] bg-white"
+          class="w-full md:w-1/2 relative min-h-[600px] md:min-h-[900px] bg-white"
         >
           <!-- Slanted Background -->
           <div
@@ -396,35 +238,35 @@
               <!-- Project 01 -->
               <a
                 class="absolute top-[0%] right-[5%] w-32 h-32 md:w-40 md:h-40 bg-[#f8a3c8] rounded-3xl transform rotate-12 flex items-start justify-start p-4 hover:scale-110 transition-transform shadow-lg cursor-pointer"
-                href="../01_wish_album/code.html"
+                href="01.html"
               >
                 <span class="font-bold text-on-surface">01</span>
               </a>
               <!-- Project 02 -->
               <a
                 class="absolute top-[15%] left-[5%] w-36 h-36 md:w-48 md:h-48 bg-[#f8a3c8] rounded-3xl transform -rotate-12 flex items-start justify-start p-4 hover:scale-110 transition-transform shadow-lg cursor-pointer"
-                href="../02_wave_motion/code.html"
+                href="02_wave_motion.html"
               >
                 <span class="font-bold text-on-surface">02</span>
               </a>
               <!-- Project 03 -->
               <a
                 class="absolute top-[40%] right-[15%] w-32 h-32 md:w-40 md:h-40 bg-[#f8a3c8] rounded-3xl flex items-start justify-start p-4 hover:scale-110 transition-transform shadow-lg cursor-pointer"
-                href="../03_mj_redesign/code.html"
+                href="03_mj_redesign.html"
               >
                 <span class="font-bold text-on-surface">03</span>
               </a>
               <!-- Project 04 -->
               <a
                 class="absolute bottom-[25%] left-[0%] w-36 h-36 md:w-48 md:h-48 bg-[#f8a3c8] rounded-3xl transform rotate-6 flex items-start justify-start p-4 hover:scale-110 transition-transform shadow-lg cursor-pointer"
-                href="../04_ai_slop/code.html"
+                href="04_ai_slop.html"
               >
                 <span class="font-bold text-on-surface">04</span>
               </a>
               <!-- Project 05 -->
               <a
                 class="absolute bottom-[0%] left-[40%] w-32 h-32 md:w-40 md:h-40 bg-[#f8a3c8] rounded-3xl flex items-start justify-start p-4 hover:scale-110 transition-transform shadow-lg cursor-pointer"
-                href="../05_3d_cafe/code.html"
+                href="05_3d_cafe.html"
               >
                 <span class="font-bold text-on-surface">05</span>
               </a>
@@ -444,12 +286,12 @@
             class="flex-1 flex items-center justify-center md:justify-start md:pl-24"
           >
             <div
-              class="text-center font-display-lg text-3xl md:text-5xl font-bold leading-relaxed tracking-tight text-on-surface"
+              class="text-center font-display-lg text-3xl md:text-3xl font-bold leading-relaxed tracking-tight text-on-surface"
             >
-              <p class="">톡톡 쏘는</p>
-              <p class="">아이디어로</p>
-              <p class="">만들어진</p>
-              <p class="">프로젝트들</p>
+              <p class="mb-2">톡톡 쏘는</p>
+              <p class="mb-2">아이디어로</p>
+              <p class="mb-2">만들어진</p>
+              <p class="mb-0">프로젝트들</p>
             </div>
           </div>
         </div>
@@ -462,7 +304,7 @@
       <p
         class="font-label-caps text-label-caps font-bold text-on-surface uppercase"
       >
-        CREATIVE SIHYEON - 2024 PORTFOLIO
+        CREATIVE SIHYEON - 2026 PORTFOLIO
       </p>
       <div class="flex gap-8">
         <a
